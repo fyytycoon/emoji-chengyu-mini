@@ -1,0 +1,94 @@
+/* pages/levels/levels.wxss */
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--gray-light);
+  padding-bottom: 20px;
+}
+
+.nav-bar {
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--gray);
+}
+
+.back-btn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-icon {
+  font-size: 18px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.placeholder {
+  width: 32px;
+}
+
+.difficulty-tabs {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px;
+  border-bottom: 1px solid var(--gray);
+}
+
+.tab {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  background-color: var(--white);
+}
+
+.tab.active {
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.3);
+}
+
+.progress-container {
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.progress-text {
+  text-align: center;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.progress-bar-bg {
+  height: 6px;
+  background-color: var(--gray);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  border-radius: 3px;
+  transition: width 0.3s;
+}
+
+.levels-grid {
+  flex: 1;
+  padding: 0 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow-y: auto;
+} 

@@ -1,0 +1,12 @@
+<view class="level-item level-{{status}}">
+  <block wx:if="{{status === 'locked'}}">
+    <icon class="icon-lock" type="warn" size="14" color="#B9BAC0"></icon>
+    <text class="level-number">{{level}}</text>
+  </block>
+  <block wx:else>
+    <text class="level-number">{{level}}</text>
+    <view wx:if="{{status === 'completed'}}" class="level-check">
+      <icon type="success" size="10" color="#ffffff"></icon>
+    </view>
+  </block>
+</view> 

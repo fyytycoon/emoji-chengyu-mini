@@ -1,0 +1,64 @@
+<view class="container">
+  <!-- 状态栏 -->
+  <view class="status-bar">
+    <view class="time">9:41</view>
+    <view class="icons">
+      <view class="icon">
+        <icon type="success" size="12" color="#333"></icon>
+      </view>
+      <view class="icon">
+        <icon type="success" size="12" color="#333"></icon>
+      </view>
+      <view class="icon">
+        <icon type="success" size="12" color="#333"></icon>
+      </view>
+    </view>
+  </view>
+
+  <!-- 标题区域 -->
+  <view class="header">
+    <view class="title-container">
+      <view class="emojis">🧩📝🎲</view>
+      <view class="game-title">Emoji猜成语</view>
+      <view class="game-subtitle">用表情猜中国智慧</view>
+    </view>
+  </view>
+
+  <!-- 用户状态 -->
+  <view class="user-stats">
+    <view class="stat-item">
+      <view class="stat-value">{{currentLevel - 1}}</view>
+      <view class="stat-label">已完成关卡</view>
+    </view>
+    <view class="stat-item">
+      <view class="stat-value">{{score}}</view>
+      <view class="stat-label">总得分</view>
+    </view>
+    <view class="stat-item">
+      <view class="stat-value">{{coins}}</view>
+      <view class="stat-label">金币</view>
+    </view>
+  </view>
+
+  <!-- 按钮区域 -->
+  <view class="button-group">
+    <button class="btn-primary btn-start" bindtap="startGame">选择关卡</button>
+    <button class="btn-secondary" bindtap="continueGame">继续游戏 (第{{currentLevel}}关)</button>
+  </view>
+
+  <!-- 底部导航 -->
+  <view class="bottom-nav">
+    <view class="nav-item" bindtap="goToProfile">
+      <view class="nav-icon">👤</view>
+      <view class="nav-text">个人</view>
+    </view>
+    <view class="nav-item active">
+      <view class="nav-icon">🏠</view>
+      <view class="nav-text">首页</view>
+    </view>
+    <view class="nav-item" bindtap="goToSettings">
+      <view class="nav-icon">⚙️</view>
+      <view class="nav-text">设置</view>
+    </view>
+  </view>
+</view> 

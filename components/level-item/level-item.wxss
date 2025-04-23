@@ -1,0 +1,51 @@
+.level-item {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 8px;
+}
+
+.level-completed {
+  background: linear-gradient(135deg, #4F46E5 0%, #4338CA 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.level-current {
+  background: linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+}
+
+.level-locked {
+  background-color: #F3F4F6;
+  color: #B9BAC0;
+  border: 1px solid #E5E5EA;
+}
+
+.level-number {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.level-check {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  width: 20px;
+  height: 20px;
+  background-color: #10B981;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.3);
+}
+
+.icon-lock {
+  margin-right: 4px;
+} 

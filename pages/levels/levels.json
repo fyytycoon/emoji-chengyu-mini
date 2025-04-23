@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "level-item": "/components/level-item/level-item"
+  },
+  "navigationStyle": "custom",
+  "disableScroll": true
+} 

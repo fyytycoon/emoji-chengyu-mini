@@ -1,0 +1,59 @@
+<!-- pages/settings/settings.wxml -->
+<view class="container {{darkMode ? 'dark-mode' : ''}}">
+  <!-- 页面标题 -->
+  <view class="header">
+    <text class="back-icon" bindtap="navigateBack">返回</text>
+    <text class="title">设置</text>
+  </view>
+
+  <!-- 设置选项区域 -->
+  <view class="settings-section">
+    <view class="settings-group">
+      <view class="section-title">游戏设置</view>
+      
+      <view class="setting-item">
+        <text class="setting-label">声音效果</text>
+        <switch checked="{{soundEnabled}}" bindchange="toggleSound" color="#4caf50" />
+      </view>
+      
+      <view class="setting-item">
+        <text class="setting-label">振动反馈</text>
+        <switch checked="{{vibrationEnabled}}" bindchange="toggleVibration" color="#4caf50" />
+      </view>
+      
+      <view class="setting-item">
+        <text class="setting-label">消息通知</text>
+        <switch checked="{{notificationEnabled}}" bindchange="toggleNotification" color="#4caf50" />
+      </view>
+      
+      <view class="setting-item">
+        <text class="setting-label">暗黑模式</text>
+        <switch checked="{{darkMode}}" bindchange="toggleDarkMode" color="#4caf50" />
+      </view>
+    </view>
+
+    <view class="settings-group">
+      <view class="section-title">关于游戏</view>
+      
+      <view class="setting-item action-item" bindtap="navigateToAbout">
+        <text class="setting-label">关于我们</text>
+        <text class="arrow">›</text>
+      </view>
+      
+      <view class="setting-item action-item" bindtap="navigateToFeedback">
+        <text class="setting-label">反馈与建议</text>
+        <text class="arrow">›</text>
+      </view>
+      
+      <view class="setting-item">
+        <text class="setting-label">版本</text>
+        <text class="setting-value">{{version}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 页脚 -->
+  <view class="footer">
+    <text class="copyright">© 2023 表情成语小游戏</text>
+  </view>
+</view> 

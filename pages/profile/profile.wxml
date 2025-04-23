@@ -1,0 +1,78 @@
+<view class="container">
+  <!-- 状态栏 -->
+  <view class="status-bar">
+    <view class="time">9:41</view>
+    <view class="icons">
+      <view class="icon">
+        <icon type="success" size="12" color="#333"></icon>
+      </view>
+      <view class="icon">
+        <icon type="success" size="12" color="#333"></icon>
+      </view>
+      <view class="icon">
+        <icon type="success" size="12" color="#333"></icon>
+      </view>
+    </view>
+  </view>
+
+  <!-- 导航栏 -->
+  <view class="nav-bar">
+    <view class="back-btn" bindtap="navigateToHome">
+      <view class="back-icon">⬅️</view>
+    </view>
+    <view class="title">个人资料</view>
+    <view class="placeholder"></view>
+  </view>
+
+  <!-- 用户信息 -->
+  <view class="user-info">
+    <view class="avatar-container">
+      <image class="avatar" src="{{userInfo.avatarUrl}}" mode="aspectFill"></image>
+      <button wx:if="{{!hasUserInfo && canIUseGetUserProfile}}" class="avatar-button" bindtap="getUserProfile">授权头像</button>
+    </view>
+    <view class="nickname">{{userInfo.nickName}}</view>
+  </view>
+
+  <!-- 游戏统计 -->
+  <view class="stats-container">
+    <view class="stats-title">游戏统计</view>
+    
+    <view class="stats-grid">
+      <view class="stats-item">
+        <view class="stats-value">{{stats.completedLevels}}</view>
+        <view class="stats-label">已完成关卡</view>
+      </view>
+      <view class="stats-item">
+        <view class="stats-value">{{stats.totalScore}}</view>
+        <view class="stats-label">总得分</view>
+      </view>
+      <view class="stats-item">
+        <view class="stats-value">{{stats.totalCoins}}</view>
+        <view class="stats-label">当前金币</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 其他选项 -->
+  <view class="options-container">
+    <view class="option-item">
+      <button class="reset-button" bindtap="resetProgress">重置游戏进度</button>
+    </view>
+  </view>
+
+  <!-- 底部导航 -->
+  <view class="bottom-nav">
+    <view class="nav-item" bindtap="navigateToHome">
+      <view class="nav-icon">🏠</view>
+      <view class="nav-text">首页</view>
+    </view>
+    <view class="nav-item active">
+      <view class="nav-icon">👤</view>
+      <view class="nav-text">个人</view>
+    </view>
+    <view class="nav-item">
+      <view class="nav-icon">⚙️</view>
+      <view class="nav-text">设置</view>
+    </view>
+  </view>
+</view> 

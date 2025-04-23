@@ -1,0 +1,94 @@
+/**app.wxss**/
+page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica,
+    Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei',
+    sans-serif;
+  --primary-color: #4F46E5;
+  --primary-light: #F5F3FF;
+  --primary-dark: #4338CA;
+  --secondary-color: #0EA5E9;
+  --secondary-light: #E1F5FE;
+  --secondary-dark: #0284C7;
+  --accent-color: #FBBF24;
+  --accent-light: #FEF3C7;
+  --accent-dark: #F59E0B;
+  --gray-light: #F8F9FA;
+  --gray: #E5E5EA;
+  --gray-dark: #6B7280;
+  --text-color: #111827;
+  --text-secondary: #6B7280;
+  --background: #F8F9FA;
+  --white: #FFFFFF;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: var(--background);
+}
+
+/* 状态栏样式 */
+.status-bar {
+  height: 44px;
+  width: 100%;
+  background-color: var(--gray-light);
+  color: var(--text-color);
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* 导航栏样式 */
+.nav-bar {
+  height: 44px;
+  width: 100%;
+  background-color: var(--gray-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--gray);
+  box-sizing: border-box;
+}
+
+/* 按钮样式 */
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  color: var(--white);
+  border-radius: 12px;
+  padding: 14px 0;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+  transition: all 0.2s;
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* 通用标题样式 */
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.title-text {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: var(--text-secondary);
+} 

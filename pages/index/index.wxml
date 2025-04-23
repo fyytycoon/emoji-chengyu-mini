@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="title-container">
+    <view class="logo">🎮</view>
+    <view class="title-text">Emoji猜成语</view>
+    <view class="subtitle">用表情猜中国智慧</view>
+  </view>
+  
+  <view class="loading">
+    <view class="loading-dot"></view>
+    <view class="loading-dot"></view>
+    <view class="loading-dot"></view>
+  </view>
+</view> 

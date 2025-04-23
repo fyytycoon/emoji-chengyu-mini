@@ -1,0 +1,59 @@
+<view class="container">
+  <!-- 状态栏 -->
+  <view class="status-bar">
+    <view class="time">9:41</view>
+    <view class="icons">
+      <view class="icon">
+        <icon type="success" size="12" color="#333"></icon>
+      </view>
+      <view class="icon">
+        <icon type="success" size="12" color="#333"></icon>
+      </view>
+      <view class="icon">
+        <icon type="success" size="12" color="#333"></icon>
+      </view>
+    </view>
+  </view>
+
+  <!-- 导航栏 -->
+  <view class="nav-bar">
+    <view class="back-btn" bindtap="navigateToHome">
+      <view class="back-icon">⬅️</view>
+    </view>
+    <view class="title">选择关卡</view>
+    <view class="placeholder"></view>
+  </view>
+
+  <!-- 难度选择 -->
+  <view class="difficulty-tabs">
+    <view 
+      class="tab {{currentDifficulty === item ? 'active' : ''}}" 
+      wx:for="{{difficulties}}" 
+      wx:key="index" 
+      bindtap="onTabClick"
+      data-difficulty="{{item}}"
+    >
+      {{item}}
+    </view>
+  </view>
+
+  <!-- 进度条 -->
+  <view class="progress-container">
+    <view class="progress-text">{{progressText}}</view>
+    <view class="progress-bar-bg">
+      <view class="progress-bar" style="width: {{progressPercent}}%"></view>
+    </view>
+  </view>
+
+  <!-- 关卡网格 -->
+  <view class="levels-grid">
+    <view 
+      wx:for="{{levels}}" 
+      wx:key="id"
+      bindtap="selectLevel"
+      data-level="{{item.id}}"
+    >
+      <level-item level="{{item.id}}" status="{{item.status}}"></level-item>
+    </view>
+  </view>
+</view> 

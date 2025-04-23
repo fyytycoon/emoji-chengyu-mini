@@ -1,0 +1,193 @@
+/* pages/settings/settings.wxss */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f8f8f8;
+  padding-bottom: 30rpx;
+}
+
+/* 暗黑模式 */
+.dark-mode {
+  background-color: #222;
+  color: #fff;
+}
+
+.dark-mode .header {
+  background-color: #222;
+  color: #fff;
+}
+
+.dark-mode .settings-section {
+  background-color: #333;
+}
+
+.dark-mode .setting-item {
+  border-bottom: 1rpx solid #444;
+}
+
+.dark-mode .setting-label {
+  color: #fff;
+}
+
+.dark-mode .setting-arrow {
+  color: #aaa;
+}
+
+.dark-mode .version-info {
+  color: #aaa;
+}
+
+/* 页头 */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 30rpx 30rpx;
+  background-color: #4caf50;
+  color: white;
+  position: relative;
+}
+
+.back-icon {
+  font-size: 32rpx;
+  margin-right: 20rpx;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+/* 设置区域 */
+.settings-section {
+  flex: 1;
+  padding: 0 30rpx;
+}
+
+.settings-group {
+  margin-bottom: 40rpx;
+  background-color: white;
+  border-radius: 16rpx;
+  padding: 20rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0,0,0,0.05);
+}
+
+.section-title {
+  font-size: 30rpx;
+  font-weight: bold;
+  margin: 20rpx 0 30rpx 20rpx;
+  color: #4caf50;
+}
+
+.dark-mode .section-title {
+  color: #6ecf73;
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx 20rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.dark-mode .setting-item {
+  border-bottom: 1rpx solid #444;
+}
+
+.setting-item:last-child {
+  border-bottom: none;
+}
+
+.setting-label {
+  font-size: 28rpx;
+}
+
+.setting-value {
+  font-size: 28rpx;
+  color: #999;
+}
+
+.dark-mode .setting-value {
+  color: #aaa;
+}
+
+/* 可点击的设置项 */
+.action-item {
+  cursor: pointer;
+}
+
+.arrow {
+  font-size: 36rpx;
+  color: #999;
+}
+
+.dark-mode .arrow {
+  color: #aaa;
+}
+
+/* 页脚样式 */
+.footer {
+  text-align: center;
+  padding: 30rpx 0;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.dark-mode .footer {
+  color: #666;
+}
+
+/* 开关样式覆盖 */
+switch {
+  transform: scale(0.8);
+}
+
+/* 版本信息样式 */
+.version-info {
+  width: 100%;
+  padding: 40rpx 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #999;
+  font-size: 26rpx;
+  margin-top: auto;
+}
+
+.version-text {
+  text-align: center;
+}
+
+/* 关于部分 */
+.about-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx 10rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.about-item:last-child {
+  border-bottom: none;
+}
+
+.about-info {
+  display: flex;
+  align-items: center;
+}
+
+.about-icon {
+  margin-right: 20rpx;
+  font-size: 36rpx;
+}
+
+.about-name {
+  font-size: 32rpx;
+}
+
+.arrow {
+  color: #cccccc;
+  font-size: 28rpx;
+} 

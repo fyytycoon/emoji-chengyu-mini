@@ -1,0 +1,57 @@
+<view class="container">
+  <!-- 状态栏 -->
+  <view class="status-bar">
+    <view class="time-badge">
+      <icon class="time-icon" type="waiting" size="14" color="#6B7280"></icon>
+      <text>{{timeString}}</text>
+    </view>
+    <view class="icons">
+      <view class="icon">
+        <icon type="success" size="12" color="#333"></icon>
+      </view>
+    </view>
+  </view>
+
+  <!-- 导航栏 -->
+  <view class="nav-bar">
+    <view class="back-btn" bindtap="navigateToLevels">
+      <view class="back-icon">⬅️</view>
+    </view>
+    <view class="level-title">{{levelTitle}}</view>
+    <view class="coins-display" bindtap="useHint">
+      <view class="coins-icon">💰</view>
+      <text>{{coins}}</text>
+    </view>
+  </view>
+
+  <!-- 难度 -->
+  <view class="difficulty-badge">
+    <icon class="difficulty-icon" type="success" size="14" color="#FFFFFF"></icon>
+    <text>{{difficulty}}</text>
+  </view>
+
+  <!-- Emoji区域 -->
+  <view class="emoji-container">
+    <emoji-item wx:for="{{emojis}}" wx:key="index" emoji="{{item}}"></emoji-item>
+  </view>
+
+  <!-- 答案区域 -->
+  <view class="answer-area">
+    <text class="answer-hint">填写成语:</text>
+    <view class="answer-box">
+      <view 
+        class="answer-char {{item.filled ? 'filled' : ''}}" 
+        wx:for="{{answerChars}}" 
+        wx:key="index"
+      >
+        {{item.char}}
+      </view>
+    </view>
+  </view>
+
+  <!-- 提交按钮 -->
+  <button class="submit-button" bindtap="checkAnswer">提交答案</button>
+
+  <!-- 虚拟键盘 -->
+  <keyboard keys="{{keyboardKeys}}" bind:keypress="onKeyPress"></keyboard>
+</view> 

@@ -1,0 +1,18 @@
+<view class="keyboard">
+  <view class="keyboard-row" wx:for="{{[0, 1, 2]}}" wx:for-item="rowIndex" wx:key="rowIndex">
+    <view 
+      class="key {{item === 'backspace' ? 'function-key' : ''}}"
+      wx:for="{{keys.slice(rowIndex * 7, (rowIndex + 1) * 7)}}"
+      wx:key="index"
+      bindtap="onKeyPress"
+      data-key="{{item}}"
+    >
+      <block wx:if="{{item === 'backspace'}}">
+        <icon type="cancel" size="20" color="#6B7280"></icon>
+      </block>
+      <block wx:else>
+        {{item}}
+      </block>
+    </view>
+  </view>
+</view> 
