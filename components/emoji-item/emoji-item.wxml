@@ -1,3 +1,3 @@
-<view class="emoji-item">
-  <view class="emoji">{{emoji}}</view>
+<view class="emoji-item" style="width:{{containerSize}};height:{{containerSize}};padding:{{padding}};">
+  <view class="emoji" style="font-size:{{emojiSize}};">{{emoji}}</view>
 </view> 

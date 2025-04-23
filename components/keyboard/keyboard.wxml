@@ -1,8 +1,8 @@
 <view class="keyboard">
-  <view class="keyboard-row" wx:for="{{[0, 1, 2]}}" wx:for-item="rowIndex" wx:key="rowIndex">
+  <view class="keyboard-row" wx:for="{{keyboardRows}}" wx:for-item="rowKeys" wx:key="index">
     <view 
       class="key {{item === 'backspace' ? 'function-key' : ''}}"
-      wx:for="{{keys.slice(rowIndex * 7, (rowIndex + 1) * 7)}}"
+      wx:for="{{rowKeys}}" 
       wx:key="index"
       bindtap="onKeyPress"
       data-key="{{item}}"

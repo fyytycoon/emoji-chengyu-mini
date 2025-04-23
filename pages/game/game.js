@@ -93,22 +93,55 @@ Page({
     // 常用汉字，这里只是示例，可以替换为更好的候选字集
     const commonChars = '的一是了我不人在他有这个上们来到时大地为子中你说生国年着就那和要她出也得里后自以会家可下而过天去能对小多然于心学么之都好看起发当没成只如事把还用第样道想作种开美总从无情己面最女但现前些所同日手又行意动方期它头经长儿回位分爱老因很给名法间斯知世什两次使身者被高己百';
     
-    // 随机选择一些常用字，加上成语中的字，然后打乱顺序
-    let allChars = [...idiomChars];
-    while (allChars.length < 20) {
-      const randomChar = commonChars.charAt(Math.floor(Math.random() * commonChars.length));
-      if (!allChars.includes(randomChar)) {
-        allChars.push(randomChar);
+    // 获取设备信息
+    try {
+      const systemInfo = wx.getSystemInfoSync();
+      const screenWidth = systemInfo.screenWidth;
+      
+      // 根据屏幕宽度确定键盘大小
+      let keyboardSize = 20; // 默认值
+      if (screenWidth <= 320) {
+        keyboardSize = 15; // 小屏幕
+      } else if (screenWidth <= 375) {
+        keyboardSize = 18; // 中等屏幕
       }
+      
+      // 随机选择一些常用字，加上成语中的字，然后打乱顺序
+      let allChars = [...idiomChars];
+      while (allChars.length < keyboardSize) {
+        const randomChar = commonChars.charAt(Math.floor(Math.random() * commonChars.length));
+        if (!allChars.includes(randomChar)) {
+          allChars.push(randomChar);
+        }
+      }
+      
+      // 打乱字符顺序
+      allChars = this.shuffleArray(allChars);
+      
+      // 添加退格键
+      allChars.push('backspace');
+      
+      return allChars;
+    } catch (e) {
+      console.error('生成键盘失败', e);
+      
+      // 如果出错，使用默认值
+      let allChars = [...idiomChars];
+      while (allChars.length < 20) {
+        const randomChar = commonChars.charAt(Math.floor(Math.random() * commonChars.length));
+        if (!allChars.includes(randomChar)) {
+          allChars.push(randomChar);
+        }
+      }
+      
+      // 打乱字符顺序
+      allChars = this.shuffleArray(allChars);
+      
+      // 添加退格键
+      allChars.push('backspace');
+      
+      return allChars;
     }
-    
-    // 打乱字符顺序
-    allChars = this.shuffleArray(allChars);
-    
-    // 添加退格键
-    allChars.push('backspace');
-    
-    return allChars;
   },
   
   // 打乱数组

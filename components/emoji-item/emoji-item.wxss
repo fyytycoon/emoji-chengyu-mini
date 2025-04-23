@@ -1,17 +1,17 @@
 .emoji-item {
   background: linear-gradient(135deg, #E1F5FE 0%, #B3E5FC 100%);
   border-radius: 16px;
-  padding: 20px;
-  min-width: 80px;
-  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 4px 12px rgba(3, 169, 244, 0.1), inset 0 -2px 0 rgba(0,0,0,0.05);
-  flex: 1;
+  margin: 5px;
+  box-sizing: border-box;
+  /* 防止emoji被压缩 */
+  flex-shrink: 0;
 }
 
 .emoji {
-  font-size: 60px;
   line-height: 1;
+  text-align: center;
 } 
