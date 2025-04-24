@@ -32,20 +32,39 @@ Page({
     }
   },
   
-  // 开始游戏 - 进入关卡选择页面
-  startGame() {
+  // Emoji猜成语 - 经典模式
+  startEmojiClassic() {
+    
+    // 进入关卡选择页面
     wx.navigateTo({
       url: '/pages/levels/levels',
     });
   },
   
-  // 继续游戏 - 直接进入当前关卡
-  continueGame() {
-    // 将当前关卡ID存储到本地
-    wx.setStorageSync('selectedLevel', this.data.currentLevel);
+  // Emoji猜成语 - 每日挑战
+  startEmojiDaily() {
     
+    // 直接进入每日挑战页面
     wx.navigateTo({
-      url: '/pages/game/game',
+      url: '/pages/game/game?mode=daily&type=emoji',
+    });
+  },
+  
+  // 拼音猜成语 - 随机模式
+  startPinyinRandom() {
+    
+    // 进入随机游戏页面
+    wx.navigateTo({
+      url: '/pages/game/game?mode=random&type=pinyin',
+    });
+  },
+  
+  // 拼音猜成语 - 每日挑战
+  startPinyinDaily() {
+    
+    // 直接进入每日挑战页面
+    wx.navigateTo({
+      url: '/pages/game/game?mode=daily&type=pinyin',
     });
   },
   

@@ -84,7 +84,7 @@ Page({
   // 用于小程序的分享功能
   onShareAppMessage() {
     return {
-      title: `我在Emoji猜成语中猜出了"${this.data.idiom}"，获得${this.data.score}分！`,
+      title: `我在Emoji猜成语中猜出了"${this.data.idiom}"，太棒了！`,
       path: '/pages/index/index',
       imageUrl: ''  // 可以添加分享图片
     };

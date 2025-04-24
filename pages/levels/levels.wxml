@@ -1,28 +1,12 @@
 <view class="container">
-  <!-- 状态栏 -->
-  <view class="status-bar">
-    <view class="time">9:41</view>
-    <view class="icons">
-      <view class="icon">
-        <icon type="success" size="12" color="#333"></icon>
-      </view>
-      <view class="icon">
-        <icon type="success" size="12" color="#333"></icon>
-      </view>
-      <view class="icon">
-        <icon type="success" size="12" color="#333"></icon>
-      </view>
-    </view>
-  </view>
-
   <!-- 导航栏 -->
-  <view class="nav-bar">
+  <!-- <view class="nav-bar">
     <view class="back-btn" bindtap="navigateToHome">
       <view class="back-icon">⬅️</view>
     </view>
     <view class="title">选择关卡</view>
     <view class="placeholder"></view>
-  </view>
+  </view> -->
 
   <!-- 难度选择 -->
   <view class="difficulty-tabs">

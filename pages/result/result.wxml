@@ -1,19 +1,4 @@
 <view class="container">
-  <!-- 状态栏 -->
-  <view class="status-bar">
-    <view class="time">9:41</view>
-    <view class="icons">
-      <view class="icon">
-        <icon type="success" size="12" color="#333"></icon>
-      </view>
-      <view class="icon">
-        <icon type="success" size="12" color="#333"></icon>
-      </view>
-      <view class="icon">
-        <icon type="success" size="12" color="#333"></icon>
-      </view>
-    </view>
-  </view>
 
   <!-- 结果内容 -->
   <view class="result-container">
@@ -26,40 +11,11 @@
       <view class="idiom-hint">{{hint}}</view>
     </view>
     
-    <!-- 分数统计 -->
-    <view class="score-container">
-      <view class="score-total">
-        <text class="score-value">{{score}}</text>
-        <text class="score-label">总分</text>
-      </view>
-      
-      <view class="score-details">
-        <view class="score-item">
-          <text class="item-value">{{baseScore}}</text>
-          <text class="item-label">基础分</text>
-        </view>
-        <view class="score-item">
-          <text class="item-value">{{timeBonus}}</text>
-          <text class="item-label">时间奖励</text>
-        </view>
-        <view class="score-item">
-          <text class="item-value">{{timeString}}</text>
-          <text class="item-label">耗时</text>
-        </view>
-      </view>
-    </view>
-    
     <!-- 按钮区域 -->
     <view class="button-group">
       <button class="btn-primary" bindtap="continueGame">继续下一关</button>
       <button class="btn-secondary" bindtap="backToLevels">返回关卡</button>
       <button class="btn-share" open-type="share" bindtap="shareResult">分享战绩</button>
-    </view>
-
-    <!-- 当前金币 -->
-    <view class="coins-display">
-      <view class="coins-icon">💰</view>
-      <text>当前金币: {{coins}}</text>
     </view>
   </view>
 </view> 

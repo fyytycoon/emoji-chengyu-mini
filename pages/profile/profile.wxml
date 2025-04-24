@@ -61,7 +61,7 @@
   </view>
 
   <!-- 底部导航 -->
-  <view class="bottom-nav">
+  <!-- <view class="bottom-nav">
     <view class="nav-item" bindtap="navigateToHome">
       <view class="nav-icon">🏠</view>
       <view class="nav-text">首页</view>
@@ -74,5 +74,5 @@
       <view class="nav-icon">⚙️</view>
       <view class="nav-text">设置</view>
     </view>
-  </view>
+  </view> -->
 </view> 

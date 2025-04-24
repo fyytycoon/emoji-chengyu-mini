@@ -16,14 +16,14 @@ Page({
   },
   
   onLoad() {
-    // 获取选择的关卡ID
+    // 获取选择的关卡ID 
     const selectedLevel = wx.getStorageSync('selectedLevel') || app.globalData.game.currentLevel;
-    
     this.setData({
       levelId: selectedLevel
     });
-    
     this.startLevel(selectedLevel);
+
+    
   },
   
   onShow() {
@@ -270,7 +270,7 @@ Page({
       wx.setStorageSync('gameResult', gameResult);
       
       // 跳转到结果页面
-      wx.navigateTo({
+      wx.redirectTo({
         url: '/pages/result/result',
       });
     } else {
@@ -316,6 +316,9 @@ Page({
   
   // 返回关卡选择页面
   navigateToLevels() {
-    wx.navigateBack();
+    // 进入关卡选择页面
+    wx.redirectTo({
+      url: '/pages/levels/levels',
+    });
   }
 }); 

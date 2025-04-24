@@ -1,7 +1,7 @@
 {
+  "navigationBarTitleText": "选择关卡",
   "usingComponents": {
     "level-item": "/components/level-item/level-item"
   },
-  "navigationStyle": "custom",
   "disableScroll": true
 } 

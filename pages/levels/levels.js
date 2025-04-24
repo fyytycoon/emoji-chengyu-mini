@@ -61,7 +61,7 @@ Page({
     wx.setStorageSync('selectedLevel', levelId);
     
     // 跳转到游戏页面
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/game/game',
     });
   },

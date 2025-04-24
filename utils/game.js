@@ -41,7 +41,7 @@ class EmojiIdiomGame {
     }
   }
   
-  // 开始当前关卡
+  // 开始当前关卡 
   startLevel(levelId) {
     // 使用传入的levelId，如果没有则使用当前关卡
     const targetLevelId = levelId ? parseInt(levelId) : this.currentLevel;

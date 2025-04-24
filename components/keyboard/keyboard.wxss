@@ -15,7 +15,7 @@
 .key {
   height: 40px;
   flex: 1;
-  margin: 0 3px;
+  margin: 0 5px;
   border-radius: 8px;
   display: flex;
   justify-content: center;
@@ -23,8 +23,8 @@
   font-weight: bold;
   background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
   box-shadow: 0 2px 4px rgba(0,0,0,0.05), inset 0 -2px 0 rgba(0,0,0,0.05);
-  min-width: 30px;
-  max-width: 50px;
+  min-width: 40px;
+  max-width: 70px;
   font-size: 16px;
 }
 

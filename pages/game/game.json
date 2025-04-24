@@ -3,6 +3,5 @@
     "emoji-item": "/components/emoji-item/emoji-item",
     "keyboard": "/components/keyboard/keyboard"
   },
-  "navigationStyle": "custom",
   "disableScroll": true
 } 

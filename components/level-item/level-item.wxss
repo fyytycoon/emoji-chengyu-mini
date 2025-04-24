@@ -25,6 +25,7 @@
   background-color: #F3F4F6;
   color: #B9BAC0;
   border: 1px solid #E5E5EA;
+  box-sizing: border-box;
 }
 
 .level-number {
