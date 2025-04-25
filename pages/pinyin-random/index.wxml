@@ -1,0 +1,77 @@
+<view class="container">
+  <!-- 顶部信息栏 -->
+  <view class="header">
+    <view class="timer">
+      <view class="timer-icon">⏱️</view>
+      <view class="timer-text">{{timeString}}</view>
+    </view>
+    <view class="score-container">
+      <view class="score-item">
+        <view class="score-icon">🏆</view>
+        <view class="score-value">{{score}}</view>
+      </view>
+      <view class="score-item">
+        <view class="score-icon">💰</view>
+        <view class="score-value">{{coins}}</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 拼音提示区域 -->
+  <view class="pinyin-container">
+    <block wx:for="{{pinyinHint}}" wx:key="index">
+      <view class="pinyin-item">{{item}}</view>
+    </block>
+  </view>
+
+  <!-- 答案区域 -->
+  <view class="answer-container">
+    <block wx:for="{{answerChars}}" wx:key="index">
+      <view class="answer-box {{item.filled ? 'filled' : ''}}">
+        <text>{{item.char}}</text>
+      </view>
+    </block>
+  </view>
+
+  <!-- 键盘区域 -->
+  <view class="keyboard-container">
+    <block wx:for="{{keyboardKeys}}" wx:key="index">
+      <view class="key-button {{item === 'backspace' ? 'backspace' : ''}}" 
+            bindtap="onKeyPress" 
+            data-index="{{index}}">
+        <text wx:if="{{item !== 'backspace'}}">{{item}}</text>
+        <text wx:else>←</text>
+      </view>
+    </block>
+  </view>
+
+  <!-- 提示和提交按钮 -->
+  <view class="action-buttons">
+    <view class="hint-button" bindtap="useHint">
+      <text class="hint-icon">💡</text>
+      <text class="hint-text">提示 (20金币)</text>
+    </view>
+    <view class="next-button" bindtap="resetGame">
+      <text>下一题</text>
+    </view>
+    <view class="home-button" bindtap="navigateToHome">
+      <text>返回</text>
+    </view>
+  </view>
+
+  <!-- 游戏结果遮罩 -->
+  <view class="result-overlay" wx:if="{{showResult}}">
+    <view class="result-container {{isCorrect ? 'correct' : 'wrong'}}">
+      <view class="result-icon">{{isCorrect ? '🎉' : '😢'}}</view>
+      <view class="result-title">{{isCorrect ? '答对了！' : '答错了！'}}</view>
+      <view class="result-idiom">正确答案: {{idiom.idiom}}</view>
+      <view class="result-hint" wx:if="{{idiom.hint}}">
+        <text>提示: {{idiom.hint}}</text>
+      </view>
+      <view class="result-buttons">
+        <button class="result-button" bindtap="resetGame">再来一次</button>
+        <button class="result-button" bindtap="navigateToHome">返回主页</button>
+      </view>
+    </view>
+  </view>
+</view> 

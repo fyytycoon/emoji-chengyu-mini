@@ -54,7 +54,7 @@ Page({
   startPinyinRandom() {
     // 进入随机游戏页面
     wx.navigateTo({
-      url: '',
+      url: '/pages/pinyin-random/index',
     });
   },
   

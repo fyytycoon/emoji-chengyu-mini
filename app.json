@@ -6,7 +6,8 @@
     "pages/result/result",
     "pages/profile/profile",
     "pages/settings/settings",
-    "pages/pygame/index"
+    "pages/pygame/index",
+    "pages/pinyin-random/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
