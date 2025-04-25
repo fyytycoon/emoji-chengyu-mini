@@ -1,0 +1,93 @@
+<word-blocks
+  class="word"
+  wx:for="{{ tries }}"
+  wx:key="index"
+  word="{{ item }}"
+  revealed="{{ true }}"
+/>
+<block wx:if="{{ showAnswer }}">
+  <view class="answer-title">正确答案</view>
+  <word-blocks word="{{ answer.word }}" />
+</block>
+<word-blocks
+  wx:if="{{ !isFinished }}"
+  class="word {{ invalidIdiom ? 'shake' : '' }}"
+  word="{{ input || '' }}"
+  active="{{ true }}"
+/>
+<block wx:if="{{ !isFinished }}">
+  <view class="input-box">
+    <input
+      class="input"
+      value="{{ input }}"
+      placeholder="输入四字词语..."
+      bind:input="onInput"
+      bind:confirm="onConfirm"
+    />
+    <view wx:if="{{ invalidIdiom }}" class="toast">成语不在词库内</view>
+  </view>
+  <button
+    class="btn {{ disabled ? 'disabled' : '' }}"
+    hover-class="active"
+    disabled="{{ disabled }}"
+    bind:tap="onConfirm"
+  >
+    确 定
+  </button>
+  <view wx:if="{{ tries.length > 4 && !isFailed }}" class="rest">
+    剩余 {{ rest }} 次机会
+  </view>
+  <view
+    wx:if="{{ isFailed }}"
+    class="answer"
+    hover-class="answer-active"
+    bind:tap="openAnswer"
+  >
+    查看答案
+  </view>
+  <view class="help">
+    <view
+      wx:if="{{ !useNoHint }}"
+      class="hint"
+      hover-class="hint-active"
+      bind:tap="openHint"
+    >
+      提示
+    </view>
+    <view
+      class="reset"
+      hover-class="reset-active"
+      bind:tap="resetGame"
+    >
+      重置
+    </view>
+    <view
+      class="cheatsheet"
+      hover-class="cheatsheet-active"
+      bind:tap="openSheet"
+    >
+      速查表
+    </view>
+  </view>
+</block>
+<block wx:else>
+  <view class="result">
+    {{ hintText }} ·{{ strict ? ' 严格模式 ·' : '' }} {{ duration }}
+  </view>
+  <button
+    open-type="share"
+    class="btn share"
+    hover-class="active"
+    bind:tap="onConfirm"
+  >
+    分享
+  </button>
+  <view class="mask {{ useMask ? 'masked' : '' }}" bind:tap="toggleMask">
+    {{ useMask ? '关闭遮罩' : '开启遮罩' }}
+  </view>
+  <view class="op-50">分享时建议开启遮罩避免剧透</view>
+  <view class="divider" />
+  <view class="op-50">距离下一题更新还有</view>
+  <view class="count-down">{{ countDown }}</view>
+</block>
+

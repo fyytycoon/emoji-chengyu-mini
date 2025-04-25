@@ -1,0 +1,53 @@
+<!-- <view class="title">字多（原汉兜）</view> -->
+<!-- <view class="desc">汉字 Wordle</view> -->
+<!-- <view class="divider" /> -->
+<view class="rule">游戏规则</view>
+<view class="mb-16 text-center">
+  <text>你有十次的机会猜一个 </text>
+  <text class="text-ok">四字词语</text>
+</view>
+<view>每次猜测后，汉字与拼音的颜色将会标识其与正确答案的区别。</view>
+<view class="divider" />
+<word-blocks word="风靡一时" revealed="{{ true }}" answer="一目了然" />
+<view class="mt-16 mb-16">
+  <text>第三个字 </text>
+  <text class="text-ok">一</text>
+  <text> 为橙色，表示其出现在答案中，但并不是第三个字。</text>
+</view>
+<word-blocks word="一应俱全" revealed="{{ true }}" answer="一目了然" />
+<view class="mt-16 mb-16">
+  <text>第一个字 </text>
+  <text class="text-ok">一</text>
+  <text> 为青色，表示其出现在答案中且在正确的位置。</text>
+</view>
+<word-blocks word="一尘不染" revealed="{{ true }}" answer="一目了然" />
+<view class="mt-16 mb-16">
+  <text>每个格子的 </text>
+  <text class="text-bold">汉字、声母、韵母、声调</text>
+  <text> 都会独立进行颜色的指示。 例如，第四个 </text>
+  <text class="op-50">染</text>
+  <text>
+    汉字为灰色，而其 声母 与 韵母 均为青色，代表该位置的正确答案为其同音字但非
+  </text>
+  <text class="op-50">染</text>
+  <text> 字本身。 同理，第三个字中韵母 </text>
+  <text class="text-mis">{{ final }}</text>
+  <text> 为橙色，代表其韵母出现在四个字之中，但非位居第三。以此类推。</text>
+</view>
+<word-blocks word="一目了然" revealed="{{ true }}" answer="一目了然" />
+<view class="mt-16 text-center">当四个格子都为青色时，你便赢得了游戏！</view>
+<view class="divider" />
+<button class="btn" hover-class="active" bind:tap="onStart">开始游戏</button>
+<view class="text-center op-50">* 新题目每日零时更新</view>
+<view class="divider" />
+<!-- <han-settings class="settings" lite="{{ true }}" /> -->
+<!-- <view class="divider" /> -->
+<view class="footer">
+  <navigator
+    url="/pages/privacy/index"
+    class="flex-1 text-right mr-16 op-50"
+    hover-class="op-80"
+  >
+    隐私声明
+  </navigator>
+</view>

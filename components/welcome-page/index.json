@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "word-blocks": "../word-blocks/index",
+    "han-settings": "../han-settings/index"
+  }
+}

@@ -1,0 +1,34 @@
+:host {
+  padding: 64rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.day {
+  font-weight: bold;
+}
+.answer {
+  margin-top: 32rpx;
+}
+.answer-text {
+  font-weight: bold;
+}
+.hint {
+  margin-top: 32rpx;
+}
+.btn {
+  margin-top: 32rpx;
+  width: fit-content;
+  height: 64rpx;
+  padding: 0 32rpx;
+  background: #de7525;
+  color: #fff;
+  font-size: 32rpx;
+  line-height: 64rpx;
+  border: none;
+  border-radius: 8rpx;
+  opacity: 0.9;
+}
+.active {
+  opacity: 1;
+}

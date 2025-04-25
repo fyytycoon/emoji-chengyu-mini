@@ -1,0 +1,62 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32rpx 64rpx 64rpx;
+}
+.title {
+  margin-bottom: 64rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.zy {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+.symbol {
+  width: 96rpx;
+  height: 96rpx;
+  font-size: 48rpx;
+  text-align: center;
+  font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+}
+.sp {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32rpx 80rpx;
+}
+.sp-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 32rpx;
+  height: min-content;
+}
+.py {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 32rpx 80rpx;
+}
+.sub-title {
+  text-align: center;
+}
+.py-initials,
+.py-finals {
+  display: grid;
+  gap: 24rpx;
+  text-align: center;
+}
+.py-initials {
+  grid-template-columns: 1fr 1fr;
+}
+.py-finals {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.text-ok {
+  color: #1d9c9c;
+}
+.text-mis {
+  color: #de7525;
+}
+.op-30 {
+  opacity: 0.3;
+}

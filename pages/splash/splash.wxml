@@ -1,7 +1,7 @@
 <view class="container">
   <view class="splash-content">
     <view class="splash-logo">🎮</view>
-    <view class="splash-title">Emoji猜成语</view>
+    <view class="splash-title">成语挑战屋</view>
     <view class="splash-subtitle">准备好挑战你的成语知识了吗？</view>
     <view class="loading-bar">
       <view class="loading-progress" style="width: {{loadingProgress}}%;"></view>

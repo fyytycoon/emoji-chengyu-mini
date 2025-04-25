@@ -6,7 +6,7 @@
   position: relative;
   background-color: #f8f9fa;
   overflow: hidden;
-  padding: 20px;
+  padding: 40rpx;
 }
 
 /* 用户问候 */
@@ -14,7 +14,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 80px;
+  margin-bottom: 180rpx;
+  margin-top: 50rpx;
 }
 
 .greeting-title {
@@ -42,18 +43,19 @@
 
 /* 游戏模式分类 */
 .game-category {
+  width: 90%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 40rpx;
 }
 
 .category-header {
-  margin-bottom: 12px;
-  padding-left: 4px;
+  margin-bottom: 30rpx;
+  padding-left: 10rpx;
 }
 
 .category-title {
-  font-size: 18px;
+  font-size: 36rpx;
   font-weight: 600;
   color: #111827;
   display: flex;
@@ -71,73 +73,73 @@
 }
 
 .category-desc {
-  font-size: 12px;
+  font-size: 24rpx;
   color: #6b7280;
-  margin-top: 2px;
-  margin-left: 12px;
+  margin-top: 4rpx;
+  margin-left: 24rpx;
 }
 
 .modes-row {
   display: flex;
-  gap: 12px;
-  margin-bottom: 24px;
+  gap: 24rpx;
+  margin-bottom: 100rpx;
 }
 
 .game-mode-card {
   background-color: white;
-  border-radius: 16px;
-  padding: 16px;
+  border-radius: 32rpx;
+  padding: 32rpx;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  border: 1px solid #F3F4F6;
+  box-shadow: 0 4rpx 16rpx rgba(0,0,0,0.05);
+  border: 2rpx solid #F3F4F6;
   flex: 1;
 }
 
 .emoji-icon-container {
-  width: 48px;
-  height: 48px;
+  width: 90rpx;
+  height: 90rpx;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10px;
-  font-size: 24px;
+  margin-bottom: 20rpx;
+  font-size: 48rpx;
 }
 
 .classic-icon {
   background: linear-gradient(135deg, #34D399 0%, #10B981 100%);
-  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2);
+  box-shadow: 0 8rpx 20rpx rgba(16, 185, 129, 0.2);
 }
 
 .time-icon {
   background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 100%);
-  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.2);
+  box-shadow: 0 8rpx 20rpx rgba(59, 130, 246, 0.2);
 }
 
 .rank-icon {
   background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%);
-  box-shadow: 0 4px 10px rgba(245, 158, 11, 0.2);
+  box-shadow: 0 8rpx 20rpx rgba(245, 158, 11, 0.2);
 }
 
 .daily-icon {
   background: linear-gradient(135deg, #F472B6 0%, #EC4899 100%);
-  box-shadow: 0 4px 10px rgba(236, 72, 153, 0.2);
+  box-shadow: 0 8rpx 20rpx rgba(236, 72, 153, 0.2);
 }
 
 .mode-title {
-  font-size: 14px;
+  font-size: 24rpx;
   font-weight: 500;
   text-align: center;
   color: #111827;
 }
 
 .mode-subtitle {
-  font-size: 12px;
+  font-size: 24rpx;
   color: #6b7280;
   text-align: center;
-  margin-top: 4px;
+  margin-top: 8rpx;
 }
 
 /* 动画 */

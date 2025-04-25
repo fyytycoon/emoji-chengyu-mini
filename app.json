@@ -1,13 +1,12 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/splash/splash",
     "pages/home/home",
     "pages/levels/levels",
     "pages/game/game",
     "pages/result/result",
     "pages/profile/profile",
-    "pages/settings/settings"
+    "pages/settings/settings",
+    "pages/pygame/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

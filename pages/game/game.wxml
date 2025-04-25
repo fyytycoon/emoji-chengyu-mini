@@ -43,5 +43,5 @@
   <button class="submit-button" bindtap="checkAnswer">提交答案</button>
 
   <!-- 虚拟键盘 -->
-  <keyboard style="width: 90%;" keys="{{keyboardKeys}}" bind:keypress="onKeyPress"></keyboard>
+  <keyboard style="width: 85%;" keys="{{keyboardKeys}}" bind:keypress="onKeyPress"></keyboard>
 </view> 

@@ -1,0 +1,29 @@
+:host {
+  display: flex;
+  justify-content: space-between;
+}
+.tile {
+  width: 160rpx;
+  height: 160rpx;
+  user-select: none;
+  position: relative;
+}
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.6s;
+  backface-visibility: hidden;
+  /* stylelint-disable-next-line property-no-vendor-prefix */
+  -webkit-backface-visibility: hidden;
+}
+.back {
+  transform: rotateY(180deg);
+}
+.revealed .front {
+  transform: rotateY(180deg);
+}
+.revealed .back {
+  transform: rotateY(0deg);
+}

@@ -1,0 +1,17 @@
+<view class="icons">
+  <view class="help" hover-class="help-active" bind:tap="openHelp" />
+  <view
+    wx:if="{{ gamesCount }}"
+    class="dashboard"
+    hover-class="dashboard-active"
+    bind:tap="openDashboard"
+  />
+</view>
+<!-- <view class="icons">
+  <view
+    class="settings"
+    hover-class="settings-active"
+    bind:tap="openSettings"
+  />
+  <view class="theme" hover-class="theme-active" /> 
+</view> -->

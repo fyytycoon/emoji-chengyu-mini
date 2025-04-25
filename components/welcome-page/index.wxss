@@ -1,0 +1,83 @@
+:host {
+  display: block;
+  padding: 64rpx 32rpx;
+}
+.title {
+  font-size: 60rpx;
+  text-align: center;
+}
+.desc {
+  opacity: 0.5;
+  font-size: 28rpx;
+  text-align: center;
+}
+.divider {
+  margin: 48rpx auto;
+  width: 80rpx;
+  height: 1px;
+  background: rgba(156, 163, 175, 0.1);
+}
+.rule {
+  margin-bottom: 32rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+  text-align: center;
+}
+.mt-16 {
+  margin-top: 32rpx;
+}
+.mb-16 {
+  margin-bottom: 32rpx;
+}
+.text-center {
+  text-align: center;
+}
+.text-ok {
+  color: #1d9c9c;
+  font-weight: bold;
+}
+.text-bold {
+  font-weight: bold;
+}
+.op-50 {
+  opacity: 0.5;
+}
+.text-mis {
+  color: #de7525;
+  font-weight: bold;
+}
+.btn {
+  margin-bottom: 32rpx;
+  width: fit-content;
+  height: 80rpx;
+  padding: 0 32rpx;
+  background: #0d828e;
+  color: #fff;
+  font-size: 32rpx;
+  line-height: 80rpx;
+  border: none;
+  border-radius: 8rpx;
+  opacity: 0.9;
+}
+.active {
+  opacity: 1;
+}
+.settings {
+  padding: 0;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+}
+.flex-1 {
+  flex: 1;
+}
+.text-right {
+  text-align: right;
+}
+.mr-16 {
+  margin-right: 32rpx;
+}
+.op-80 {
+  opacity: 0.8;
+}

@@ -1,0 +1,42 @@
+:host {
+  display: block;
+  padding: 48rpx 0;
+}
+.row {
+  display: flex;
+  justify-content: center;
+  padding: 16rpx 0;
+}
+.square {
+  display: flex;
+  align-items: center;
+  padding: 8rpx 16rpx;
+  border: 1px solid rgba(156, 163, 175, 0.1);
+  position: relative;
+}
+.text-primary {
+  color: #0d828e;
+}
+.op-50 {
+  opacity: 0.5;
+}
+.op-80 {
+  opacity: 0.8;
+}
+.divider {
+  margin: 0 16rpx;
+  width: 1px;
+  height: 32rpx;
+  background: rgba(156, 163, 175, 0.1);
+}
+.mark {
+  position: absolute;
+  top: -8rpx;
+  right: -8rpx;
+  height: 16rpx;
+  width: 16rpx;
+  background: #0d828e;
+}
+.mr-16 {
+  margin-right: 32rpx;
+}

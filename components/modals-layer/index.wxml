@@ -1,0 +1,51 @@
+<han-modal
+  wx:if="{{ showHint }}"
+  show="{{ show }}"
+  bind:show="onShow"
+  bind:close="closeHint"
+>
+  <han-hint />
+</han-modal>
+<han-modal
+  wx:if="{{ showCheatSheet }}"
+  show="{{ show }}"
+  showClose="{{ true }}"
+  bind:show="onShow"
+  bind:close="closeCheatSheet"
+>
+  <cheat-sheet />
+</han-modal>
+<han-modal
+  wx:if="{{ showHelp }}"
+  show="{{ show }}"
+  showClose="{{ initialized }}"
+  bind:show="onShow"
+  bind:close="closeHelp"
+>
+  <welcome-page bind:close="closeHelp" />
+</han-modal>
+<han-modal
+  wx:if="{{ showDashboard }}"
+  show="{{ show }}"
+  showClose="{{ true }}"
+  bind:show="onShow"
+  bind:close="closeDashboard"
+>
+  <dash-board />
+</han-modal>
+<han-modal
+  wx:if="{{ showSettings }}"
+  show="{{ show }}"
+  bind:show="onShow"
+  bind:close="closeSettings"
+>
+  <han-settings />
+</han-modal>
+<han-modal
+  wx:if="{{ showFailed }}"
+  show="{{ show }}"
+  bind:show="onShow"
+  bind:close="closeFailed"
+>
+  <failed-page bind:close="closeFailed" />
+</han-modal>

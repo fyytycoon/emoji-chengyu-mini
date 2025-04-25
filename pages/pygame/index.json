@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "每日挑战",
+  "usingComponents": {
+    "nav-bar": "/components/nav-bar/index",
+    "han-play": "/components/han-play/index",
+    "modals-layer": "/components/modals-layer/index"
+  }
+}

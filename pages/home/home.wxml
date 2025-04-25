@@ -5,7 +5,7 @@
         <view class="greeting-title">你好，玩家！</view>
         <view class="greeting-subtitle">今天来挑战一下成语知识吧</view>
       </view>
-      <view class="avatar">😊</view>
+      <!-- <view class="avatar">😊</view> -->
     </view>
 
     <!-- 游戏模式 -->

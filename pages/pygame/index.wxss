@@ -1,0 +1,13 @@
+.home {
+  text-align: center;
+}
+.logo {
+  width: 800rpx;
+  height: 800rpx;
+  margin-top: 240rpx;
+}
+.greeting {
+  color: #2c3e50;
+  font-size: 128rpx;
+  font-weight: bold;
+}

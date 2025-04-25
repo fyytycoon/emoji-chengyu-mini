@@ -8,7 +8,7 @@ Page({
     emojis: [],
     coins: 0,
     timeLeft: 120,
-    timeString: '02:00',
+    timeString: '03:00',
     answerChars: [],
     keyboardKeys: [],
     currentIdiom: null,
