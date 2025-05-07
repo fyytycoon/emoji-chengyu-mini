@@ -1,73 +1,43 @@
 <view class="container">
-  <!-- 用户问候 -->
-  <view class="user-greeting">
-      <view class="greeting-text">
-        <view class="greeting-title">你好，玩家！</view>
-        <view class="greeting-subtitle">今天来挑战一下成语知识吧</view>
-      </view>
-      <!-- <view class="avatar">😊</view> -->
-    </view>
+  <!-- 顶部 Header -->
+  <view class="header">
+    <view class="header-title">成语挑战</view>
+    <!-- 可以考虑在这里放一个小的背景图案或颜色 -->
+  </view>
 
-    <!-- 游戏模式 -->
-    <view class="game-category">
-      <!-- Emoji猜成语 -->
-      <view class="category-header">
-        <view class="category-title">Emoji猜成语</view>
-        <view class="category-desc">通过表情符号猜测成语</view>
+  <!-- 游戏模式区域 -->
+  <view class="game-modes-area">
+    <!-- Emoji 猜成语分类 -->
+    <view class="category-section">
+      <view class="category-divider">
+        <text class="category-title">Emoji 猜成语</text>
       </view>
       
-      <view class="modes-row">
-        <view class="game-mode-card" bindtap="startEmojiClassic">
-          <view class="emoji-icon-container classic-icon">🧩</view>
+      <view class="mode-card emoji-mode" bindtap="startEmojiClassic">
+        <view class="mode-icon">🧩</view>
+        <view class="mode-info">
           <view class="mode-title">经典模式</view>
-          <view class="mode-subtitle">按照关卡逐步解锁</view>
+          <view class="mode-description">挑战emoji猜成语关卡</view>
         </view>
-        
-        <view class="game-mode-card" bindtap="startEmojiDaily">
-          <view class="emoji-icon-container daily-icon">📅</view>
-          <view class="mode-title">每日挑战</view>
-          <view class="mode-subtitle">每天一道新题目</view>
-        </view>
-      </view>
-      
-      <!-- 拼音猜成语 -->
-      <view class="category-header">
-        <view class="category-title">拼音猜成语</view>
-        <view class="category-desc">根据拼音提示猜测成语</view>
-      </view>
-      
-      <view class="modes-row">
-        <view class="game-mode-card" bindtap="startPinyinRandom">
-          <view class="emoji-icon-container time-icon">🎲</view>
-          <view class="mode-title">随机模式</view>
-          <view class="mode-subtitle">随机抽取成语挑战</view>
-        </view>
-        
-        <view class="game-mode-card" bindtap="startPinyinDaily">
-          <view class="emoji-icon-container rank-icon">📆</view>
-          <view class="mode-title">每日挑战</view>
-          <view class="mode-subtitle">每天一道拼音题目</view>
-        </view>
+        <view class="mode-action">▶</view> 
       </view>
     </view>
 
-  <!-- 底部导航 -->
-  <!-- <view class="tab-bar">
-    <view class="tab-item active">
-      <view class="tab-icon">🏠</view>
-      <view class="tab-text">首页</view>
+    <!-- 拼音 猜成语分类 -->
+    <view class="category-section">
+      <view class="category-divider">
+        <text class="category-title">拼音 猜成语</text>
+      </view>
+
+      <view class="mode-card pinyin-mode" bindtap="startPinyinDaily">
+        <view class="mode-icon">📆</view>
+        <view class="mode-info">
+          <view class="mode-title">每日挑战</view>
+          <view class="mode-description">每日一道拼音题</view>
+        </view>
+        <view class="mode-action">▶</view> 
+      </view>
     </view>
-    <view class="tab-item" bindtap="goToLevels">
-      <view class="tab-icon">🎮</view>
-      <view class="tab-text">关卡</view>
-    </view>
-    <view class="tab-item" bindtap="goToProfile">
-      <view class="tab-icon">👤</view>
-      <view class="tab-text">我的</view>
-    </view>
-    <view class="tab-item" bindtap="goToSettings">
-      <view class="tab-icon">⚙️</view>
-      <view class="tab-text">设置</view>
-    </view>
-  </view> -->
-</view> 
+  </view>
+
+</view>

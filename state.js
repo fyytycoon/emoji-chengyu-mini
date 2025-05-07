@@ -18,7 +18,7 @@ var _index2 = require("./answers/index");
 const now = exports.now = (0, _now.useNow)();
 const showHint = exports.showHint = (0, _core.ref)(false);
 const showSettings = exports.showSettings = (0, _core.ref)(false);
-const showHelp = exports.showHelp = (0, _core.ref)(false);
+const showHelp = exports.showHelp = (0, _core.ref)(true);
 const showFailed = exports.showFailed = (0, _core.ref)(false);
 const showDashboard = exports.showDashboard = (0, _core.ref)(false);
 const showCheatSheet = exports.showCheatSheet = (0, _core.ref)(false);

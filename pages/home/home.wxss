@@ -1,150 +1,122 @@
 /* pages/home/home.wxss */
 .container {
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  position: relative;
-  background-color: #f8f9fa;
-  overflow: hidden;
-  padding: 40rpx;
+  min-height: 100vh; /* 使用 min-height 保证至少全屏高 */
+  background-color: #f0f4f8; /* 更柔和的背景色 */
+  padding: 0; /* 移除内边距，让子元素控制 */
+  box-sizing: border-box;
+  justify-content: space-around; /* 新增：使子元素在垂直方向上均匀分布 */
 }
 
-/* 用户问候 */
-.user-greeting {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 180rpx;
-  margin-top: 50rpx;
+/* --- 顶部 Header --- */
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* 渐变背景 */
+  color: white;
+  padding: 60rpx 40rpx 40rpx; /* 增加顶部内边距 */
+  text-align: center;
+  margin-bottom: 180rpx; /* 与下方内容间距 */
+  border-bottom-left-radius: 30rpx; /* 轻微圆角 */
+  border-bottom-right-radius: 30rpx;
 }
 
-.greeting-title {
-  font-size: 20px;
+.header-title {
+  font-size: 48rpx; /* 增大标题字号 */
   font-weight: bold;
-  color: #111827;
 }
 
-.greeting-subtitle {
-  font-size: 14px;
-  color: #6b7280;
+/* --- 游戏模式区域 --- */
+.game-modes-area {
+  padding: 0 40rpx; /* 左右内边距 */
+  flex: 1; /* 占据剩余空间 */
+  width: 70%;
 }
 
-.avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #FFD3A5 0%, #FD6585 100%);
+.category-section {
+  margin-bottom: 80rpx; /* 分类之间的间距 */
+}
+
+.category-divider {
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  box-shadow: 0 2px 8px rgba(253, 101, 133, 0.3);
+  margin-bottom: 30rpx; /* 分类标题与卡片间距 */
+  color: #555; /* 标题颜色 */
 }
 
-/* 游戏模式分类 */
-.game-category {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 40rpx;
-}
-
-.category-header {
-  margin-bottom: 30rpx;
-  padding-left: 10rpx;
+.category-divider::before,
+.category-divider::after {
+  content: '';
+  flex-grow: 1;
+  height: 1px;
+  background-color: #e0e0e0; /* 分割线颜色 */
+  margin: 0 15rpx; /* 分割线与文字间距 */
 }
 
 .category-title {
-  font-size: 36rpx;
-  font-weight: 600;
-  color: #111827;
+  font-size: 32rpx; /* 调整字号 */
+  font-weight: 500;
+  color: #333;
+  white-space: nowrap; /* 防止文字换行 */
+}
+
+/* --- 模式卡片 --- */
+.mode-card {
+  background-color: #ffffff; /* 白色背景 */
+  border-radius: 24rpx; /* 圆角 */
+  padding: 35rpx; /* 内边距 */
   display: flex;
-  align-items: center;
+  align-items: center; /* 垂直居中 */
+  box-shadow: 0 6rpx 18rpx rgba(0, 0, 0, 0.06); /* 轻微阴影 */
+  transition: transform 0.2s ease-in-out; /* 点击效果 */
 }
 
-.category-title::before {
-  content: '';
-  display: inline-block;
-  width: 4px;
-  height: 18px;
-  background: linear-gradient(to bottom, #4F46E5, #6366F1);
-  border-radius: 2px;
-  margin-right: 8px;
+.mode-card:active {
+  transform: scale(0.98); /* 点击缩小效果 */
 }
 
-.category-desc {
-  font-size: 24rpx;
-  color: #6b7280;
-  margin-top: 4rpx;
-  margin-left: 24rpx;
+.mode-icon {
+  font-size: 60rpx; /* 图标大小 */
+  margin-right: 30rpx; /* 图标与文字间距 */
+  width: 80rpx; /* 固定宽度方便对齐 */
+  text-align: center;
 }
 
-.modes-row {
-  display: flex;
-  gap: 24rpx;
-  margin-bottom: 100rpx;
-}
-
-.game-mode-card {
-  background-color: white;
-  border-radius: 32rpx;
-  padding: 32rpx;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 4rpx 16rpx rgba(0,0,0,0.05);
-  border: 2rpx solid #F3F4F6;
-  flex: 1;
-}
-
-.emoji-icon-container {
-  width: 90rpx;
-  height: 90rpx;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20rpx;
-  font-size: 48rpx;
-}
-
-.classic-icon {
-  background: linear-gradient(135deg, #34D399 0%, #10B981 100%);
-  box-shadow: 0 8rpx 20rpx rgba(16, 185, 129, 0.2);
-}
-
-.time-icon {
-  background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 100%);
-  box-shadow: 0 8rpx 20rpx rgba(59, 130, 246, 0.2);
-}
-
-.rank-icon {
-  background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%);
-  box-shadow: 0 8rpx 20rpx rgba(245, 158, 11, 0.2);
-}
-
-.daily-icon {
-  background: linear-gradient(135deg, #F472B6 0%, #EC4899 100%);
-  box-shadow: 0 8rpx 20rpx rgba(236, 72, 153, 0.2);
+.mode-info {
+  flex: 1; /* 占据剩余空间 */
 }
 
 .mode-title {
-  font-size: 24rpx;
-  font-weight: 500;
-  text-align: center;
-  color: #111827;
+  font-size: 34rpx; /* 模式标题字号 */
+  font-weight: bold; /* 加粗 */
+  color: #1f2937; /* 深灰 */
+  margin-bottom: 8rpx; /* 标题与描述间距 */
 }
 
-.mode-subtitle {
-  font-size: 24rpx;
-  color: #6b7280;
-  text-align: center;
-  margin-top: 8rpx;
+.mode-description {
+  font-size: 26rpx; /* 描述字号 */
+  color: #6b7280; /* 灰色 */
 }
 
-/* 动画 */
-@keyframes iconPulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
-} 
+.mode-action {
+  font-size: 40rpx; /* 箭头图标大小 */
+  color: #9ca3af; /* 箭头颜色 */
+}
+
+/* 可以为不同模式添加特定样式，例如背景色 */
+/* .emoji-mode {
+  background: linear-gradient(to right, #e0fcfc, #e0f0ff);
+} */
+
+/* .pinyin-mode {
+  background: linear-gradient(to right, #fff0e0, #ffe0f0);
+} */
+
+/*
+.user-greeting, .greeting-text, .greeting-title, .greeting-subtitle, .avatar,
+.game-category, .category-header, .category-desc,
+.modes-row, .emoji-icon-container, .classic-icon, .time-icon, .rank-icon, .daily-icon,
+.mode-subtitle 
+{
+  display: none; 
+}
+*/

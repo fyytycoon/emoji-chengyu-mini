@@ -1,6 +1,9 @@
 // pages/game/game.js
 const app = getApp();
 
+// 在页面中定义激励视频广告
+let videoAd = null;
+
 Page({
   data: {
     levelTitle: '第1关',
@@ -12,7 +15,8 @@ Page({
     answerChars: [],
     keyboardKeys: [],
     currentIdiom: null,
-    levelId: 1
+    levelId: 1,
+    showAnswer: false // 新增：控制答案是否显示
   },
   
   onLoad() {
@@ -23,7 +27,23 @@ Page({
     });
     this.startLevel(selectedLevel);
 
-    
+    // 在页面onLoad回调事件中创建激励视频广告实例
+    if (wx.createRewardedVideoAd) {
+      videoAd = wx.createRewardedVideoAd({
+        adUnitId: 'adunit-50b424c1dea5ddf6' // 请替换为你的广告单元ID
+      })
+      videoAd.onLoad(() => {
+        console.log('激励视频 广告加载成功')
+      })
+      videoAd.onError((err) => {
+        console.error('激励视频 广告加载失败', err)
+        // 可以在这里给用户提示，例如：广告加载失败，暂时无法查看答案
+        // wx.showToast({ title: '广告加载失败', icon: 'none' });
+      })
+      // 注意：onClose 回调通常在 revealAnswer 中具体设置，以便处理观看结果
+    } else {
+      console.log('当前微信版本不支持激励视频广告');
+    }
   },
   
   onShow() {
@@ -83,6 +103,9 @@ Page({
     
     // 开始计时
     this.startTimer();
+
+    // 重置答案显示状态
+    this.setData({ showAnswer: false });
   },
   
   // 生成键盘按键
@@ -314,11 +337,71 @@ Page({
     }
   },
   
+  // 查看答案 - 集成激励广告
+  revealAnswer() {
+    // 前5关免广告
+    if (this.data.levelId < 5) {
+      this.setData({ showAnswer: true });
+      return; // 直接显示答案，跳过广告逻辑
+    }
+
+    // 5关之后需要看广告
+    if (videoAd) {
+      // 先设置好 onClose 回调
+      videoAd.onClose((res) => {
+        // 用户点击了【关闭广告】按钮
+        // 小于 2.1.0 的基础库版本，res 是 undefined
+        if (res && res.isEnded) {
+          // 正常播放结束，可以下发游戏奖励
+          console.log('广告观看完毕，显示答案');
+          this.setData({ showAnswer: true });
+        } else {
+          // 播放中途退出，不下发游戏奖励
+          console.log('广告中途退出');
+          wx.showToast({
+            title: '需要观看完整广告才能查看答案哦',
+            icon: 'none',
+            duration: 2000
+          });
+        }
+        // 清理回调，避免重复触发（如果广告实例是复用的）
+        // videoAd.offClose(); // 根据实际情况决定是否需要移除监听
+      });
+
+      // 显示广告
+      videoAd.show().catch(() => {
+        // 失败重试
+        videoAd.load()
+          .then(() => videoAd.show())
+          .catch(err => {
+            console.error('激励视频 广告显示失败', err)
+            wx.showToast({
+              title: '广告显示失败，请稍后重试',
+              icon: 'none',
+              duration: 2000
+            });
+            // 广告彻底失败，是否直接显示答案？或者提示用户？
+            // 备选方案： this.setData({ showAnswer: true });
+          })
+      })
+    } else {
+      // 没有广告实例，可能是平台不支持或加载失败
+      wx.showToast({
+        title: '暂时无法观看广告查看答案',
+        icon: 'none',
+        duration: 2000
+      });
+      // 备选方案：直接显示答案
+      // this.setData({ showAnswer: true });
+    }
+  },
+  
   // 返回关卡选择页面
   navigateToLevels() {
-    // 进入关卡选择页面
     wx.redirectTo({
       url: '/pages/levels/levels',
     });
+    this.stopTimer(); // 停止计时器
+    wx.navigateBack(); // 返回上一页
   }
 }); 

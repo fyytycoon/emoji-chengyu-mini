@@ -23,3 +23,26 @@ function getAnswerOfDay(day) {
     hint: hint || (0, _index.getHint)(word)
   };
 }
+
+// 获取随机答案
+function getRandomAnswer(usedAnswers = []) {
+  // 获取未使用过的答案列表
+  const unusedAnswers = _list.answers.filter(a => !usedAnswers.includes(a[0]));
+  
+  // 如果所有答案都已使用过,重置已使用记录
+  if (unusedAnswers.length === 0) {
+    return {
+      answer: _list.answers[Math.floor(Math.random() * _list.answers.length)],
+      shouldReset: true
+    };
+  }
+  
+  // 从未使用过的答案中随机选择一个
+  const randomIndex = Math.floor(Math.random() * unusedAnswers.length);
+  return {
+    answer: unusedAnswers[randomIndex],
+    shouldReset: false
+  };
+}
+
+exports.getRandomAnswer = getRandomAnswer;

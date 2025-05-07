@@ -18,7 +18,8 @@
       "disablePlugins": [],
       "outputPath": ""
     },
-    "condition": true
+    "condition": true,
+    "ignoreUploadUnusedFiles": false
   },
   "condition": {},
   "editorSetting": {

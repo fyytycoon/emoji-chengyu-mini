@@ -142,12 +142,50 @@
   background: linear-gradient(135deg, var(--primary-light) 0%, #EDE9FE 100%);
 }
 
-.submit-button {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-  color: white;
-  border-radius: 12rpx;
-  font-weight: bold;
+.button-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  margin-top: 20px;
+}
+
+.submit-button,
+.reveal-button {
+  width: 45%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #FFFFFF;
+  border-radius: 25px;
   text-align: center;
-  box-shadow: 0 4rpx 12rpx rgba(79, 70, 229, 0.3);
-  margin-bottom: 35rpx;
-} 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
+
+.submit-button {
+  background: linear-gradient(135deg, #4CAF50, #81C784);
+}
+
+.reveal-button {
+  background: linear-gradient(135deg, #FFA726, #FFB74D);
+}
+
+.submit-button:active,
+.reveal-button:active {
+  opacity: 0.8;
+}
+
+.correct-answer-display {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  color: #333;
+  font-size: 16px;
+  text-align: center;
+  width: 80%;
+}
+
+.keyboard {
+  /* 键盘样式 */
+}

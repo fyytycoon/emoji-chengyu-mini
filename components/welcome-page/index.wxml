@@ -7,11 +7,12 @@
   <text class="text-ok">四字词语</text>
 </view>
 <view>每次猜测后，汉字与拼音的颜色将会标识其与正确答案的区别。</view>
-<view class="divider" />
+<view><text class="text-mis">橙色</text>，表示其出现在答案中，但位置不对。</view>
+<view><text class="text-ok">青色</text>，表示其出现在答案中且在正确的位置。</view>
 <word-blocks word="风靡一时" revealed="{{ true }}" answer="一目了然" />
 <view class="mt-16 mb-16">
   <text>第三个字 </text>
-  <text class="text-ok">一</text>
+  <text class="text-mis">一</text>
   <text> 为橙色，表示其出现在答案中，但并不是第三个字。</text>
 </view>
 <word-blocks word="一应俱全" revealed="{{ true }}" answer="一目了然" />
@@ -42,12 +43,3 @@
 <view class="divider" />
 <!-- <han-settings class="settings" lite="{{ true }}" /> -->
 <!-- <view class="divider" /> -->
-<view class="footer">
-  <navigator
-    url="/pages/privacy/index"
-    class="flex-1 text-right mr-16 op-50"
-    hover-class="op-80"
-  >
-    隐私声明
-  </navigator>
-</view>

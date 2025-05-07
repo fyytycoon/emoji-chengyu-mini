@@ -39,8 +39,16 @@
     </view>
   </view>
 
-  <!-- 提交按钮 -->
-  <button class="submit-button" bindtap="checkAnswer">提交答案</button>
+  <!-- 按钮区域 -->
+  <view class="button-row">
+    <button class="submit-button" bindtap="checkAnswer">提交答案</button>
+    <button class="reveal-button" bindtap="revealAnswer">查看答案</button>
+  </view>
+
+  <!-- 正确答案显示区域 -->
+  <view class="correct-answer-display" wx:if="{{showAnswer}}">
+    正确答案: {{currentIdiom.idiom}}
+  </view>
 
   <!-- 虚拟键盘 -->
   <keyboard style="width: 85%;" keys="{{keyboardKeys}}" bind:keypress="onKeyPress"></keyboard>
