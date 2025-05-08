@@ -44,11 +44,11 @@ const idioms = [
   {
     id: 5,
     difficulty: "easy",
-    emojis: ["🍃", "👨", "❤️", "🐉"],
-    idiom: "叶公好龙",
-    points: 100,
-    reward: 20,
-    hint: "比喻口头上说喜欢某事物，实际上却害怕它",
+    emojis: ["🙅🏻‍♀️", "1️⃣", "2️⃣", "🛫"],   
+    idiom: "不翼而飞",
+    points: 200,
+    reward: 40,
+    hint: "比喻东西突然不见了，也比喻事情传播得很迅速",
     category: "人物"
   },
   {
@@ -124,11 +124,11 @@ const idioms = [
   {
     id: 13,
     difficulty: "easy",
-    emojis: ["🐴", "🐜", "🔧", "🏠"],
-    idiom: "蚂蚁搬家",
+    emojis: ["🎃", "🐍", "🎃", "🍐"],
+    idiom: "难舍难离",
     points: 100,
     reward: 20,
-    hint: "比喻虽然力量小，但是团结一致就能成功",
+    hint: "形容相互感情很深，不忍分离",
     category: "动物"
   },
   {
@@ -154,11 +154,11 @@ const idioms = [
   {
     id: 16,
     difficulty: "easy",
-    emojis: ["🐔", "🐕", "🚫", "🕊️"],
-    idiom: "鸡犬不宁",
+    emojis: ["🧂", "🐢", "🈴", "👌"], 
+    idiom: "言归和好",
     points: 100,
     reward: 20,
-    hint: "形容骚扰得厉害，连鸡狗都不得安宁",
+    hint: "意思指彼此重新和好，同“言归于好”",
     category: "动物"
   },
   {
@@ -274,21 +274,21 @@ const idioms = [
   {
     id: 29,
     difficulty: "easy",
-    emojis: ["🎭", "🌙", "💐", "🌊"],
-    idiom: "月下花前",
+    emojis: ["1️⃣", "🧂", "2️⃣", "🐟"], 
+    idiom: "一言两语",
     points: 100,
     reward: 20,
-    hint: "形容优美浪漫的环境",
+    hint: "指为数不多的几句话",
     category: "自然"
   },
   {
     id: 30,
     difficulty: "easy",
-    emojis: ["🌳", "🌳", "🐦", "💬"],
-    idiom: "林林总总",
+    emojis: ["🙅🏻‍♀️", "💃🏽", "🍹", "🦩"], 
+    idiom: "不舞之鹤",
     points: 100,
     reward: 20,
-    hint: "形容事物繁多，各种各样",
+    hint: "比喻名不副实的人；也用来讥讽人无能",
     category: "自然"
   },
   {
@@ -374,21 +374,21 @@ const idioms = [
   {
     id: 39,
     difficulty: "medium",
-    emojis: ["🫁", "✅", "🎋", "🎋"],
-    idiom: "胸有成竹",
+    emojis: ["🏝️", "🐢", "♻️", "🏋️"], 
+    idiom: "蹈规循矩",
     points: 150,
     reward: 30,
-    hint: "比喻做事之前已经有了通盘的考虑和把握",
+    hint: "遵守规矩",
     category: "植物"
   },
   {
     id: 40,
     difficulty: "medium",
-    emojis: ["🔪", "🚣", "🙏", "⚔️"],
-    idiom: "刻舟求剑",
+    emojis: ["❄️", "2️⃣", "🙅🏻‍♀️", "😫"], 
+    idiom: "学而不厌",
     points: 200,
     reward: 40,
-    hint: "比喻拘泥成法不知变通",
+    hint: "学习总感到不满足，形容好学",
     category: "行为"
   },
   {
@@ -404,11 +404,11 @@ const idioms = [
   {
     id: 42,
     difficulty: "medium",
-    emojis: ["🌊", "🏙️", "🐚", "🏯"],
-    idiom: "海市蜃楼",
+    emojis: ["💧", "✉️", "🐏", "🌸"], 
+    idiom: "水性杨花",
     points: 100,
     reward: 20,
-    hint: "比喻虚无缥缈的事物",
+    hint: "意思是像流水那样易变，像杨花那样轻飘，比喻在感情上不专一",
     category: "自然"
   },
   {
@@ -434,11 +434,11 @@ const idioms = [
   {
     id: 45,
     difficulty: "medium",
-    emojis: ["🐺", "🍽️", "🐯", "🔥"],
-    idiom: "狼吞虎咽",
+    emojis: ["🙅🏻‍♀️", "🉑", "🧂", "🌽"], 
+    idiom: "不可言喻",
     points: 100,
     reward: 20,
-    hint: "形容吃东西又猛又急的样子",
+    hint: "意思指不能用言语来说明",
     category: "行为"
   },
   {
@@ -464,11 +464,11 @@ const idioms = [
   {
     id: 48,
     difficulty: "medium",
-    emojis: ["🐝", "🐜", "💪", "📚"],
-    idiom: "蚂蚁搬家",
+    emojis: ["👇🏻", "👁️", "🍹", "✏️"], 
+    idiom: "点睛之笔",
     points: 100,
     reward: 20,
-    hint: "比喻虽然力量小，但是团结一致就能成功",
+    hint: "指文章传神绝妙之处",
     category: "动物"
   },
   {
@@ -484,51 +484,51 @@ const idioms = [
   {
     id: 50,
     difficulty: "medium",
-    emojis: ["🎭", "🌙", "💐", "🌊"],
-    idiom: "月下花前",
+    emojis: ["📦", "👓", "👉", "🧊"], 
+    idiom: "相敬如宾",
     points: 100,
     reward: 20,
-    hint: "形容优美浪漫的环境",
+    hint: "夫妻之间相互敬重爱护，就如同宾客间相待一样",
     category: "自然"
   },
   {
     id: 51,
     difficulty: "medium",
-    emojis: ["🌳", "🌳", "🐦", "💬"],
-    idiom: "林林总总",
+    emojis: ["🧘‍♂️", "贼", "🤍", "🤫"], 
+    idiom: "做贼心虚",
     points: 100,
     reward: 20,
-    hint: "形容事物繁多，各种各样",
+    hint: "指做了坏事怕人知道，心里老是不安",
     category: "自然"
   },
   {
     id: 52,
     difficulty: "medium",
-    emojis: ["🌊", "🌊", "🚣", "⭐"],
-    idiom: "浪遏飞舟",
+    emojis: ["🦆", "🌱", "㊗️", "🤲🏻"], 
+    idiom: "揠苗助长",
     points: 100,
     reward: 20,
-    hint: "比喻局势险恶，前进受阻",
+    hint: "把苗拔起来，帮助其成长。比喻违反事物的发展规律，急于求成，最后事与愿违",
     category: "自然"
   },
   {
     id: 53,
     difficulty: "medium",
-    emojis: ["🐎", "👂", "🌊", "💨"],
-    idiom: "马耳东风",
+    emojis: ["♻️", "😔", "🍹", "🔀"], 
+    idiom: "患难之交",
     points: 100,
     reward: 20,
-    hint: "比喻听了也不在意，等于没听见",
+    hint: "指一起经历过艰难处境而有深厚交情的朋友",
     category: "动物"
   },
   {
     id: 54,
     difficulty: "medium",
-    emojis: ["🪜", "🌥️", "🌈", "🎨"],
-    idiom: "五彩缤纷",
+    emojis: ["🔴", "🎨", "🕷️", "🐔"], 
+    idiom: "红颜知己",
     points: 150,
     reward: 30,
-    hint: "形容色彩繁多，十分绚丽",
+    hint: "意为形容男子所拥有的，可以无话不谈的，彼此有共鸣又非常知心的女性朋友",
     category: "自然"
   },
   {
@@ -634,21 +634,21 @@ const idioms = [
   {
     id: 65,
     difficulty: "medium",
-    emojis: ["🪞", "🌸", "🌊", "🌙"],
-    idiom: "镜花水月",
+    emojis: ["🍐", "🦅", "😏", "🈴"], 
+    idiom: "里应外合",
     points: 200,
     reward: 40,
-    hint: "比喻虚幻的景象",
+    hint: "指的是外面攻打，里面接应",
     category: "自然"
   },
   {
     id: 66,
-    difficulty: "medium",
-    emojis: ["🦢", "🧍", "🐔", "👥"],
-    idiom: "鹤立鸡群",
+    difficulty: "hard",
+    emojis: ["🎃", "🉐", "🐯", "🖼️"], 
+    idiom: "难得糊涂",
     points: 150,
     reward: 30,
-    hint: "比喻一个人的才能或仪表在一群人里显得很突出",
+    hint: "难得糊涂，是清朝乾隆年间郑板桥传世的名言，乃是他为官之道与人生之路的自况，也指人在该装糊涂的时候难得糊涂",
     category: "动物"
   },
   {
@@ -664,31 +664,31 @@ const idioms = [
   {
     id: 68,
     difficulty: "hard",
-    emojis: ["🚴", "🐯", "😰", "⬇️"],
-    idiom: "骑虎难下",
+    emojis: ["💨", "💪", "⛰️", "🌊"], 
+    idiom: "气壮山河",
     points: 200,
     reward: 40,
-    hint: "比喻事情中途遇到困难，但为形势所迫又无法中止",
+    hint: "形容气势如高山大河般雄壮豪迈，使祖国山河因而更加壮丽",
     category: "行为"
   },
   {
     id: 69,
     difficulty: "hard",
-    emojis: ["🌊", "🏊", "👀", "🐟"],
-    idiom: "浮光掠影",
+    emojis: ["🍅", "🛫", "👇🏻", "🙃"], 
+    idiom: "是非颠倒",
     points: 200,
     reward: 40,
-    hint: "比喻对事物观察不深入，印象不深刻",
+    hint: "把错的说成对的，对的说成错的，把是非弄颠倒了；指故意违反事实，混淆是非",
     category: "自然"
   },
   {
     id: 70,
     difficulty: "hard",
-    emojis: ["🌱", "🔥", "🌸", "👐"],
-    idiom: "春暖花开",
+    emojis: ["➖", "🔫", "🌙", "🐴"],
+    idiom: "横枪跃马",
     points: 150,
     reward: 30,
-    hint: "形容春景优美，气候宜人",
+    hint: "指手持武器，纵马驰骋；指在沙场作战；犹横戈跃马",
     category: "自然"
   },
   {
@@ -704,41 +704,41 @@ const idioms = [
   {
     id: 72,
     difficulty: "hard",
-    emojis: ["🌳", "🌳", "🐦", "💬"],
-    idiom: "林林总总",
+    emojis: ["🍅", "👨🏼‍🌾", "👉", "🟣"], 
+    idiom: "视民如子",
     points: 150,
     reward: 30,
-    hint: "形容事物繁多，各种各样",
+    hint: "形容帝王、官吏爱护百姓",
     category: "自然"
   },
   {
     id: 73,
     difficulty: "hard",
-    emojis: ["🌊", "🌊", "🚣", "⭐"],
-    idiom: "浪遏飞舟",
+    emojis: ["1️⃣", "🔨", "📌", "🔊"], 
+    idiom: "一锤定音",
     points: 200,
     reward: 40,
-    hint: "比喻局势险恶，前进受阻",
+    hint: "借指凭一句话作出最后决定",
     category: "自然"
   },
   {
     id: 74,
     difficulty: "hard",
-    emojis: ["🐎", "👂", "🌊", "💨"],
-    idiom: "马耳东风",
+    emojis: ["🈚", "🉑", "🆘", "💊"], 
+    idiom: "无可救药",
     points: 100,
     reward: 20,
-    hint: "比喻听了也不在意，等于没听见",
+    hint: "病已重到无法用药医治的程度，比喻已经到了无法挽救的地步",
     category: "动物"
   },
   {
     id: 75,
     difficulty: "hard",
-    emojis: ["🌙", "🌸", "🌧️", "💭"],
-    idiom: "花前月下",
+    emojis: ["🟣", "🤫", "⛅", "🈶"], 
+    idiom: "子虚乌有",
     points: 150,
     reward: 30,
-    hint: "形容优美的环境，常用来形容谈情说爱的场景",
+    hint: "司马相如对诸候、天子贪恋游猎、荒废政务的行为作了讽谏，主张修明政治，提倡节俭。在生活中，人们也不能贪恋玩乐、荒废学习，追求子虚乌有的东西，不然长此下去会引来许多不良风气",
     category: "自然"
   },
   {
@@ -804,91 +804,161 @@ const idioms = [
   {
     id: 82,
     difficulty: "hard",
-    emojis: ["👂", "🐓", "💃", "🕺"],
-    idiom: "闻鸡起舞",
+    emojis: ["1️⃣", "☀️", "🥣", "🐔"], 
+    idiom: "一日万机",
     points: 100,
     reward: 20,
-    hint: "比喻有志者及时奋发",
+    hint: "一天要处理成千上万件公务。形容公务繁忙，每天要处理很多事情",
     category: "行为"
   },
   {
     id: 83,
     difficulty: "hard",
-    emojis: ["👂", "🐓", "💃", "🕺"],
-    idiom: "闻鸡起舞",
+    emojis: ["🎂", "🌪️", "🔆", "🎀"], 
+    idiom: "高风亮节",
     points: 100,
     reward: 20,
-    hint: "比喻有志者及时奋发",
+    hint: "人品格高尚，有坚贞的节操",
     category: "行为"
   },
   {
     id: 84,
     difficulty: "hard",
-    emojis: ["👐", "⬆️", "💎", "🔮"],
-    idiom: "掌上明珠",
+    emojis: ["💰", "🤍", "🥣", "😩"], 
+    idiom: "千辛万苦",
     points: 100,
     reward: 20,
-    hint: "比喻深受宠爱的子女",
+    hint: "指各种各样的艰难困苦",
     category: "物品"
   },
   {
     id: 85,
     difficulty: "hard",
-    emojis: ["🥃", "🏹", "🐍", "👻"],
-    idiom: "杯弓蛇影",
+    emojis: ["🈚", "🔒", "🙅🏻‍♀️", "🐔"], 
+    idiom: "无所不及",
     points: 150,
     reward: 30,
-    hint: "比喻疑神疑鬼，自相惊扰",
+    hint: "没有地方不能达到",
     category: "物品"
   },
   {
     id: 86,
     difficulty: "hard",
-    emojis: ["👉", "🦌", "✔️", "🐎"],
-    idiom: "指鹿为马",
+    emojis: ["🛌", "🧊", "🙏🏻", "🍐"], 
+    idiom: "卧冰求鲤",
     points: 200,
     reward: 40,
-    hint: "比喻故意颠倒黑白，混淆是非",
+    hint: "卧在冰上以求得鲤鱼，指忍苦孝亲",
     category: "动物"
   },
   {
     id: 87,
     difficulty: "hard",
-    emojis: ["🫁", "✅", "🎋", "🎋"],
-    idiom: "胸有成竹",
+    emojis: ["💣", "🧆", "🍹", "💧"], 
+    idiom: "弹丸之地",
     points: 200,
     reward: 40,
-    hint: "比喻做事之前已经有了通盘的考虑和把握",
+    hint: "弹弓所用的铁丸或泥丸。形容地方非常狭小",
     category: "植物"
   },
   {
     id: 88,
     difficulty: "hard",
-    emojis: ["🚴", "🐯", "😰", "⬇️"],
-    idiom: "骑虎难下",
+    emojis: ["👀", "1️⃣", "4️⃣", "💰"], 
+    idiom: "见异思迁",
     points: 200,
     reward: 40,
-    hint: "比喻事情中途遇到困难，但为形势所迫又无法中止",
+    hint: "看到别的事物就想改变原来的主意；指主意不坚定，喜爱不专一",
     category: "行为"
   },
   {
     id: 89,
     difficulty: "hard",
-    emojis: ["🫁", "✅", "🎋", "🎋"],
-    idiom: "胸有成竹",
+    emojis: ["🍵", "🐠", "🍺", "🔙"], 
+    idiom: "茶余酒后",
     points: 150,
     reward: 30,
-    hint: "比喻做事之前已经有了通盘的考虑和把握",
+    hint: "泛指休息或空闲的时候",
     category: "植物"
   },
   {
     id: 90,
     difficulty: "hard",
-    emojis: ["🔪", "🚣", "🙏", "⚔️"],
-    idiom: "刻舟求剑",
+    emojis: ["🙅🏻‍♀️", "🕷️", "4️⃣", "🔥"], 
+    idiom: "不知死活",
     points: 200,
     reward: 40,
-    hint: "比喻拘泥成法不知变通",
+    hint: "形容不知利害，冒昧从事",
+    category: "行为"
+  },
+  {
+    id: 91,
+    difficulty: "hard",
+    emojis: ["🏃🏻‍♀️", "👏", "🎙️", "😄"], 
+    idiom: "追欢卖笑",
+    points: 200,
+    reward: 40,
+    hint: "指出卖色情，供人取乐",
+    category: "行为"
+  },
+  {
+    id: 92,
+    difficulty: "hard",
+    emojis: ["👗", "🚻", "👗", "💪"],  
+    idiom: "群策群力",
+    points: 200,
+    reward: 40,
+    hint: "大家一起出谋出力，发挥集体的力量",
+    category: "行为"
+  },
+  {
+    id: 93,
+    difficulty: "hard",
+    emojis: ["⌛", "🌅", "🐴", "🦶"],
+    idiom: "露出马脚",
+    points: 200,
+    reward: 40,
+    hint: "比喻隐蔽的事实真相泄露出来",
+    category: "行为"
+  },
+  {
+    id: 94,
+    difficulty: "hard",
+    emojis: ["🈚", "🔆", "🐭", "🐚"], 
+    idiom: "无名鼠辈",
+    points: 200,
+    reward: 40,
+    hint: "不出名的小人物，旧小说中经常出现的对敌方的蔑视称呼",
+    category: "行为"
+  },
+  {
+    id: 95,
+    difficulty: "hard",
+    emojis: ["🌽", "🍭", "📦", "🪁"],  
+    idiom: "鹬蚌相争",
+    points: 200,
+    reward: 40,
+    hint: "比喻双方争执不下，两败俱伤，让第三者占了便宜",
+    category: "行为"
+  },
+  {
+    id: 96,
+    difficulty: "hard",
+    emojis: ["🅱️", "🧸", "🍪", "🐔"], 
+    idiom: "避凶趋吉",
+    points: 200,
+    reward: 40,
+    hint: "避开祸害而趋向吉利或避开凶险，趋向吉祥",
+    category: "行为"
+  },
+  {
+    id: 97,
+    difficulty: "hard",
+    emojis: ["🗳️", "🐭", "🐔", "💨"],
+    idiom: "投鼠忌器",
+    points: 200,
+    reward: 40,
+    hint: "本义为想掷打老鼠，却担心老鼠身旁的器物被击坏而不敢下手；后比喻做事有所顾忌，不敢下手",
     category: "行为"
   }
 ];
